@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.sneakerhub.entity.CartItem;
 
-public interface CartItemRespository extends JpaRepository<CartItem, Integer>{
+public interface CartItemRepository extends JpaRepository<CartItem, Integer>{
 
 }

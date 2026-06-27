@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.sneakerhub.entity.Wishlist;
 
-public interface WishlistRespository extends JpaRepository<Wishlist, Integer>{
+public interface WishlistRepository extends JpaRepository<Wishlist, Integer>{
 
 }
