@@ -10,15 +10,19 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Cart {
+public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Double totalPrice;
-    private Integer totalItems;
-    private Double discount;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private String phone;
+    private String gender;
+    private String role;
     private Boolean active;
 
-    
+   
 }
