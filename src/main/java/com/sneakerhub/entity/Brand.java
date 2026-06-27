@@ -15,7 +15,8 @@ public class Brand {
 	private String description;
 	private String country;
 	private String logoUrl;
-	private boolean active;
+	private Boolean active;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -46,10 +47,10 @@ public class Brand {
 	public void setLogoUrl(String logoUrl) {
 		this.logoUrl = logoUrl;
 	}
-	public boolean isActive() {
+	public Boolean getActive() {
 		return active;
 	}
-	public void setActive(boolean active) {
+	public void setActive(Boolean active) {
 		this.active = active;
 	}
 	

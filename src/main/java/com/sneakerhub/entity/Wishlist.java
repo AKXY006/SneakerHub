@@ -1,19 +1,21 @@
 package com.sneakerhub.entity;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Category {
+public class Wishlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
-    private String description;
+    private Integer totalItems;
     private Boolean active;
+    private LocalDateTime createdAt;
 
     public Integer getId() {
         return id;
@@ -23,20 +25,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getTotalItems() {
+        return totalItems;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTotalItems(Integer totalItems) {
+        this.totalItems = totalItems;
     }
 
     public Boolean getActive() {
@@ -45,5 +39,13 @@ public class Category {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }
