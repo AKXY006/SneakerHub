@@ -1,5 +1,8 @@
 package com.sneakerhub.service;
 
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +18,23 @@ public class CategoryService {
 	public Category saveCategory(Category category) {
 		return categoryRepository.save(category);
 	}
-
-
+	
+	public List<Category> getallCategories(){
+		return categoryRepository.findAll();
+	}
+	
+	public Category getCategoryById(Integer id) {
+		return categoryRepository.findById(id).get();  // .get() is used to extract the actual Category object from Optional
+	}
+	
+	public Category updateCategory(Category category) {
+	    return categoryRepository.save(category);
+	}
+	
+	public void deleteCategoryById(Integer id) {
+		 categoryRepository.deleteById(id);
+	}
+	
+	
+	
 }

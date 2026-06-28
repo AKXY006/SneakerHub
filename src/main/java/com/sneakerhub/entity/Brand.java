@@ -20,7 +20,5 @@ public class Brand {
 	private String country;
 	private String logoUrl;
 	private Boolean active;
-	
-	
 
 }
