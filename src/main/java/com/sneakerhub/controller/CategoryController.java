@@ -34,7 +34,7 @@ public class CategoryController {
 	}
 	
 	@GetMapping("/category/{id}")
-	public Category findCategoryById(@PathVariable Integer id) {
+	public Category findCategoryById(@PathVariable Integer id) {     //Fetch data by id
 		return categoryService.getCategoryById(id);
 	}
 	
@@ -44,16 +44,17 @@ public class CategoryController {
 	}
 	
 	@PatchMapping("/category/{id}")
-	public Category patchupdateCategory(@PathVariable Integer id, @RequestBody Map<String , Object> updates) {
+	public Category patchupdateCategory(@PathVariable Integer id, @RequestBody Map<String , Object> updates) {      //Partial Update
 		 return categoryService.updateCategory(id,updates);
 	}
 	
-	
 	@DeleteMapping("/category/{id}")
-	public String deleteCategoryById(@PathVariable Integer id) {
+	public String deleteCategoryById(@PathVariable Integer id) {       //Delete by id 
 		categoryService.deleteCategoryById(id);
 		return "Delete SuccessFully ";
 	}
+	
+	
 	
 	
 	

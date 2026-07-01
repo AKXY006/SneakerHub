@@ -1,5 +1,29 @@
 package com.sneakerhub.util;
 
-public class ResponseStructure {
 
+public class ResponseStructure {
+	
+    private Integer statusCode;
+    private String message;
+    private String data;
+    
+    
+	public Integer getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(Integer statusCode) {
+		this.statusCode = statusCode;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
 }

@@ -4,12 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@NoArgsConstructor
+
 public class OrderItem {
 
     @Id
@@ -20,5 +17,40 @@ public class OrderItem {
     private Double subtotal;
     private Double discount;
     private Double finalPrice;
-
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Integer getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public Double getSubtotal() {
+		return subtotal;
+	}
+	public void setSubtotal(Double subtotal) {
+		this.subtotal = subtotal;
+	}
+	public Double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Double discount) {
+		this.discount = discount;
+	}
+	public Double getFinalPrice() {
+		return finalPrice;
+	}
+	public void setFinalPrice(Double finalPrice) {
+		this.finalPrice = finalPrice;
+	}
 }

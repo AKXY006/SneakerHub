@@ -25,7 +25,7 @@ public class CategoryService {
 	}
 	
 	public Category getCategoryById(Integer id) {
-		return categoryRepository.findById(id).get();  // .get() is used to extract the actual Category object from Optional
+		return categoryRepository.findById(id).get();
 	}
 	
 	public Category updateCategory(Category category) {
